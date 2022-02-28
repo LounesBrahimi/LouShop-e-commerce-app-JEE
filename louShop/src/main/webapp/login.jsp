@@ -14,7 +14,7 @@
 						LouShop Login
 					</div>
 					<div class="card-body">
-						<form action="" method="post">
+						<form action="login-user" method="post">
 							<div class="form-group">
 								<input type="email" class="form-control" name="login-email" placeholder="E-mail address" required>
 							</div>

@@ -22,7 +22,7 @@ public class DaoFactory {
 
         }
         DaoFactory instance = new DaoFactory(
-                "jdbc:mysql://localhost:3306/javaee", "root", "Lapiraterie#8");
+                "jdbc:mysql://localhost:3306/loushop", "root", "Lapiraterie#8");
         return instance;
     }
 
@@ -31,7 +31,7 @@ public class DaoFactory {
     }
 
     // Get Dao
-    public UserDao getPersonDao() {
+    public UserDao getUserDao() {
         return new UserDaoImpl(this);
     }
 }

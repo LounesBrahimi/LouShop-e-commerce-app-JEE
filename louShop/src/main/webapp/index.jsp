@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+<title>LouShop</title>
 <%@include file="includes/head.jsp" %>
 </head>
 
 <body>
-	<p>Hello World !</p>
+	<%@include file="includes/navbar.jsp" %>
+
 	<%@include file="includes/foot.jsp" %>
 </body>
 </html>

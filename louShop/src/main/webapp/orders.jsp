@@ -8,7 +8,8 @@
 </head>
 
 <body>
-	<p>Hello World !</p>
+	<%@include file="includes/navbar.jsp" %>
+
 	<%@include file="includes/foot.jsp" %>
 </body>
 </html>

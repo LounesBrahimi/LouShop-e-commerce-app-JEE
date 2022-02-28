@@ -1,3 +1,4 @@
+<%@page import="dao.DaoFactory"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,6 +10,8 @@
 
 <body>
 	<%@include file="includes/navbar.jsp" %>
+
+	<%  System.out.println(DaoFactory.getInstance().getConnection()); %>
 
 	<%@include file="includes/foot.jsp" %>
 </body>

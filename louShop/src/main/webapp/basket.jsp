@@ -42,9 +42,6 @@ font-size: 20px;
 			<h3>
 				Total Price ${ total }€
 			</h3>
-			<a class="mx-3 btn btn-primary" href="#">
-				Ckeck
-			</a>
 			<table class="table table-light">
 				<thead>
 					<tr>

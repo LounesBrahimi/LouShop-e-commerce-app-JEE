@@ -59,4 +59,14 @@
     <servlet-name>IncDecQuantityServlet</servlet-name>
     <url-pattern>/inc-dec</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveBasketServlet</display-name>
+    <servlet-name>RemoveBasketServlet</servlet-name>
+    <servlet-class>servlets.RemoveBasketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveBasketServlet</servlet-name>
+    <url-pattern>/remove-basket</url-pattern>
+  </servlet-mapping>
 </web-app>

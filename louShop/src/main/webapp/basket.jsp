@@ -74,7 +74,7 @@ font-size: 20px;
 										<button type="submit" class="btn btn-primary btn-sm">Buy</button>
 									</form>
 								</td>
-								<td><a href="" class="btn btn-sm btn-danger">Remove</a></td>
+								<td><a href="remove-basket?id=<%= basket.getId() %>" class="btn btn-sm btn-danger">Remove</a></td>
 							</tr>		
 						<%	}
 						}

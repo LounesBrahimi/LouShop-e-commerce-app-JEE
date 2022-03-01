@@ -76,4 +76,30 @@ public class ProductDaoImpl implements ProductDao{
 		}
 		return catalog;
 	}
+
+	@Override
+	public double totalPriceBasket(ArrayList<Basket> basketList) {
+		double total = 0;
+		Connection connexion = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+		try {
+			connexion = daoFactory.getConnection();
+			if(!basketList.isEmpty()) {
+				for (Basket basket : basketList) {
+					String query = "select price from products where product_id=?";
+					statement = connexion.prepareStatement(query);
+					statement.setInt(1, basket.getId());
+					result = statement.executeQuery();
+					while(result.next()) {
+						total+=result.getDouble("price")*basket.getQuantity();
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return total;
+	}
 }

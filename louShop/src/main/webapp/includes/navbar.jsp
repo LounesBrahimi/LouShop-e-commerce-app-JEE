@@ -1,3 +1,5 @@
+<%@page import="beans.Basket"%>
+<%@page import="java.util.ArrayList"%>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<div class="container">
     		<a class="navbar-brand" href="index.jsp">LouShop</a>
@@ -10,7 +12,7 @@
           				<a class="nav-link" aria-current="page" href="index.jsp">Home</a>
         			</li>
         			<li class="nav-item">
-          				<a class="nav-link" href="basket.jsp">Basket</a>
+          				<a class="nav-link" href="basket.jsp">Basket<% if(session.getAttribute("basket-list")!=null){%><span class="badge bg-danger"><%= ((ArrayList<Basket>) session.getAttribute("basket-list")).size()%></span><%}%></a>
         			</li>
         			<% if (auth != null) {%>
         			<li class="nav-item">

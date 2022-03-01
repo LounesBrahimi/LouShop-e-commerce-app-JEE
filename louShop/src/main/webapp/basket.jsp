@@ -14,6 +14,7 @@
    if (basketList != null) {
 		basketProducts = DaoFactory.getInstance().getProductDao().listBasketProducts(basketList);
 		request.setAttribute("basket_list", basketList);
+		request.setAttribute("total", DaoFactory.getInstance().getProductDao().totalPriceBasket(basketList));
 	}
 %>
 <!DOCTYPE html>
@@ -39,7 +40,7 @@ font-size: 20px;
 	<div class="container my-3">
 		<div class="d-flex py-3">
 			<h3>
-				Total Price 0€
+				Total Price ${ (total)?total:0 }€
 			</h3>
 			<a class="mx-3 btn btn-primary" href="#">
 				Ckeck
@@ -57,7 +58,6 @@ font-size: 20px;
 				<tbody>
 					<%
 						if(basketList != null){
-							System.out.println("##pas null le catalog dans session##");
 							for(Basket basket : basketProducts){%>
 								<tr>
 								<td><%= basket.getName() %></td>
@@ -77,8 +77,6 @@ font-size: 20px;
 								<td><a href="" class="btn btn-sm btn-danger">Remove</a></td>
 							</tr>		
 						<%	}
-						} else {
-							System.out.println("##null le catalog dans session##");
 						}
 					%>
 				</tbody>

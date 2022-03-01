@@ -49,4 +49,14 @@
     <servlet-name>AddToBasketServlet</servlet-name>
     <url-pattern>/add-to-basket</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IncDecQuantityServlet</display-name>
+    <servlet-name>IncDecQuantityServlet</servlet-name>
+    <servlet-class>servlets.IncDecQuantityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IncDecQuantityServlet</servlet-name>
+    <url-pattern>/inc-dec</url-pattern>
+  </servlet-mapping>
 </web-app>

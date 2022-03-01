@@ -1,11 +1,15 @@
+<%@page import="servlets.ProductServlet"%>
 <%@page import="dao.DaoFactory"%>
 <%@page import="beans.User"%>
+<%@page import="beans.Product"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% User auth = (User) request.getSession().getAttribute("auth"); 
    if (auth != null){
 	   request.setAttribute("auth", auth);
    }
+   List<Product> products = DaoFactory.getInstance().getProductDao().listProducts();
 %>
 
 <!DOCTYPE html>
@@ -18,8 +22,33 @@
 <body>
 	<%@include file="includes/navbar.jsp" %>
 
-	<%  System.out.println(DaoFactory.getInstance().getConnection()); %>
-
+	<div class="container">
+		<div class="card-header my-3">
+			All Products
+		</div>
+		<div class="row">
+			<% if (!products.isEmpty()){
+				for(Product product : products){
+			%>
+				<div class="col-md-3">
+					<div class="card w-100" style="width: 18rem;">
+  						<img src="pictures/<%=product.getImage() %>" class="card-img-top" alt="...">
+  							<div class="card-body">
+    							<h5 class="card-title"><%= product.getName() %></h5>
+    							<h6 class="price">Price <%= product.getPrice() %>€</h6>
+    							<h6 class="category">Category: <%= product.getCategory() %></h6>
+    							<div class="mt-3 d-flex justify-content-between">
+    								<a href="#" class="btn btn-primary">Add to Basket</a>
+    								<a href="#" class="btn btn-primary">Buy</a>
+    							</div>
+  							</div>
+					</div>
+				</div>
+			<%}
+			}
+			%>
+		</div>
+	</div>
 	<%@include file="includes/foot.jsp" %>
 </body>
 </html>

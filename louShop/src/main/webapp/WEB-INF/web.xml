@@ -39,4 +39,14 @@
     <servlet-name>ProductServlet</servlet-name>
     <url-pattern>/products</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddToBasketServlet</display-name>
+    <servlet-name>AddToBasketServlet</servlet-name>
+    <servlet-class>servlets.AddToBasketServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddToBasketServlet</servlet-name>
+    <url-pattern>/add-to-basket</url-pattern>
+  </servlet-mapping>
 </web-app>

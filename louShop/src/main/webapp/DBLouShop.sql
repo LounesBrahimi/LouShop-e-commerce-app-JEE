@@ -20,7 +20,7 @@ CREATE TABLE orders (
   order_date varchar(450) NOT NULL,
   PRIMARY KEY (order_id)
 ) ENGINE = INNODB;
-INSERT INTO orders VALUES (1,1,1,2,'2022-02-28'),(2,1,1,1,'2021-02-28');
+--INSERT INTO orders VALUES (1,1,1,2,'2022-02-28'),(2,1,1,1,'2021-02-28');
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (

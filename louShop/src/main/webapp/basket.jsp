@@ -64,11 +64,11 @@ font-size: 20px;
 								<td><%= basket.getCategory() %></td>
 								<td><%= basket.getPrice() %>€</td>
 								<td>
-									<form action="" method="post" class="form-inline">
+									<form action="order" method="post" class="form-inline">
 										<input type="hidden" name="id" value="<%=basket.getId()%>" class="form-input">
 											<div class="form-group d-flex justify-content-between">
 												<a class="btn bnt-sm btn-incre" href="inc-dec?action=inc&id=<%=basket.getId()%>"><i class="fas fa-plus-square"></i></a> 
-												<input type="text" name="quantity" class="form-control"  value="<%= basket.getQuantity() %>" readonly> 
+												<input type="text" name="quantity" class="form-control w-2"  value="<%= basket.getQuantity() %>" readonly> 
 												<a class="btn btn-sm btn-decre" href="inc-dec?action=dec&id=<%=basket.getId()%>"><i class="fas fa-minus-square"></i></a>
 											</div>
 										<button type="submit" class="btn btn-primary btn-sm">Buy</button>

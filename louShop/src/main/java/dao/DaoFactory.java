@@ -37,4 +37,8 @@ public class DaoFactory {
     public ProductDao getProductDao() {
         return new ProductDaoImpl(this);
     }
+    
+    public OrderDao getOrderDao() {
+        return new OrderDaoImpl(this);
+    }
 }

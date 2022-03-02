@@ -20,7 +20,6 @@ CREATE TABLE orders (
   order_date varchar(450) NOT NULL,
   PRIMARY KEY (order_id)
 ) ENGINE = INNODB;
---INSERT INTO orders VALUES (1,1,1,2,'2022-02-28'),(2,1,1,1,'2021-02-28');
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (
@@ -37,5 +36,7 @@ INSERT INTO products VALUES (1,'Boucles lustre or','Boucles',798,'boucles-lustre
 							(3,'Bague mariage diamant','Bague',450,'bague-mariage.jpg'),
 							(4,'Boucles en diamant','Boucles',499,'boucles-diamant.jpg'),
 							(5,'Bague en diamant','Bague',899,'bague-rare-diamant.jpg'),
-							(6,'Collier en perles','Colliers',1999,'collier-perles.jpg');
+							(6,'Collier en perles','Colliers',1999,'collier-perles.jpg'),
+							(7,'Champagne of Gold','Champagne',1200,'champagne.jpg'),
+							(8,'Plaque 100g of Gold','Gold',1200,'plaque.jpg');							
 							
